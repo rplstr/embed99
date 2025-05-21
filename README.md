@@ -23,6 +23,16 @@ Build and run the provided quine example:
 gcc -std=c99 -Wall -I. -o examples/quine examples/quine.c
 ./examples/quine
 ```
+> A quine is a computer program that takes no input and produces a copy of its own source code as its only output.
+
+## Example: Readme
+
+Build and run the provided readme example:
+```sh
+gcc -std=c99 -Wall -I. -o examples/readme examples/readme.c
+./examples/readme
+```
+The example should print out this README.
 
 ## License
 
