@@ -16,24 +16,6 @@ Single-header C/C++ library under 200 LoC for embedding arbitrary files into you
    size_t len = elen(&bin);
    ```
 
-## Example: Quine
-
-Build and run the provided quine example:
-```sh
-cc -std=c99 -Wall -I. -o examples/quine examples/quine.c
-./examples/quine
-```
-> A quine is a computer program that takes no input and produces a copy of its own source code as its only output.
-
-## Example: Readme
-
-Build and run the provided readme example:
-```sh
-cc -std=c99 -Wall -I. -o examples/print_readme examples/print_readme.c
-./examples/print_readme
-```
-The example should print out this README.
-
 ## License
 
-Public-domain (0BSD). See header in `embed99.h` for full text.
+This project is licensed under the 0BSD license. See [LICENSE](LICENSE) for full text.
