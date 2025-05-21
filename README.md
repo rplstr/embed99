@@ -29,7 +29,7 @@ cc -std=c99 -Wall -I. -o examples/quine examples/quine.c
 
 Build and run the provided readme example:
 ```sh
-gcc -std=c99 -Wall -I. -o examples/readme examples/readme.c
+cc -std=c99 -Wall -I. -o examples/readme examples/readme.c
 ./examples/readme
 ```
 The example should print out this README.
