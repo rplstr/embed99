@@ -29,8 +29,8 @@ cc -std=c99 -Wall -I. -o examples/quine examples/quine.c
 
 Build and run the provided readme example:
 ```sh
-cc -std=c99 -Wall -I. -o examples/readme examples/readme.c
-./examples/readme
+cc -std=c99 -Wall -I. -o examples/print_readme examples/print_readme.c
+./examples/print_readme
 ```
 The example should print out this README.
 
