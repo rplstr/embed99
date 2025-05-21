@@ -20,7 +20,7 @@ Single-header C/C++ library under 200 LoC for embedding arbitrary files into you
 
 Build and run the provided quine example:
 ```sh
-gcc -std=c99 -Wall -I. -o examples/quine examples/quine.c
+cc -std=c99 -Wall -I. -o examples/quine examples/quine.c
 ./examples/quine
 ```
 
