@@ -57,7 +57,10 @@ typedef struct {
 /**
  * embed(name,path) — embed binary file into .rodata (8-byte aligned)
  *
- *   embed(foo, "assets/foo.bin");
+ * paths in `embed()` are resolved by the assembler relative to its working
+ * directory or include path.
+ *
+ * embed(foo, "assets/foo.bin");
  *   // -> extern const er foo;
  *   //    edata(&foo), elen(&foo)
  */
