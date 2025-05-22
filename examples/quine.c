@@ -3,9 +3,9 @@
 #include "embed99.h"
 #include <stdio.h>
 
-embed(quine_source, "examples/quine.c");
+e99_embed(quine_source, "examples/quine.c");
 
 int main(void) {
-  fwrite(edata(&quine_source), 1, elen(&quine_source), stdout);
+  fwrite(e99_edata(&quine_source), 1, e99_elen(&quine_source), stdout);
   return 0;
 }
