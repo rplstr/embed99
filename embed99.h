@@ -51,7 +51,7 @@ typedef struct {
  *   // -> extern const er foo;
  *   //    edata(&foo), elen(&foo)
  */
-#define embed(name, path)                                                      \
+#define e99_embed(name, path)                                                  \
   EMBED_EXTERN const uint8_t _b_##name##_s[];                                  \
   EMBED_EXTERN const uint8_t _b_##name##_e[];                                  \
   __asm__(".section " EMBED_SECTION "\n\t" EMBED_ALIGN "\n\t"                  \
@@ -68,7 +68,7 @@ typedef struct {
  *
  * size includes the terminating '\\0'.
  */
-#define embedtxt(name, path)                                                   \
+#define e99_embedtxt(name, path)                                               \
   EMBED_EXTERN const uint8_t _b_##name##_s[];                                  \
   EMBED_EXTERN const uint8_t _b_##name##_e[];                                  \
   __asm__(".section " EMBED_SECTION "\n\t" EMBED_ALIGN "\n\t"                  \
@@ -86,7 +86,7 @@ typedef struct {
  *
  * sec must be a quoted section name, e.g. ".mysec".
  */
-#define embedsec(name, path, sec)                                              \
+#define e99_embedsec(name, path, sec)                                          \
   EMBED_EXTERN const uint8_t _b_##name##_s[];                                  \
   EMBED_EXTERN const uint8_t _b_##name##_e[];                                  \
   __asm__(".section " sec "\n\t" EMBED_ALIGN "\n\t"                            \
@@ -102,8 +102,8 @@ typedef struct {
  * edata(r) — get pointer to embedded data
  * elen(r)  — get length in bytes
  */
-static inline const void *edata(const er *r) { return r->d; }
-static inline size_t elen(const er *r) {
+static inline const void *e99_edata(const er *r) { return r->d; }
+static inline size_t e99_elen(const er *r) {
   const uint8_t *s = (const uint8_t *)r->d;
   const uint8_t *e = (const uint8_t *)r->e;
   return (size_t)(e - s);
