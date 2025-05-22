@@ -8,12 +8,12 @@ Single-header C/C++ library under 200 LoC for embedding arbitrary files into you
 2. Include and embed files:
    ```c
    #include "embed99.h"
-   embed(bin, "cool.bin");
+   e99_embed(bin, "cool.bin");
    ```
 3. Access data:
    ```c
-   const void *data = edata(&bin);
-   size_t len = elen(&bin);
+   const void *data = e99_edata(&bin);
+   size_t len = e99_elen(&bin);
    ```
 
 ## License
