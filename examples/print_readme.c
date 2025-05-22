@@ -3,9 +3,9 @@
 #include "embed99.h"
 #include <stdio.h>
 
-embedtxt(readme, "README.md");
+e99_embedtxt(readme, "README.md");
 
 int main(void) {
-  fputs((const char *)edata(&readme), stdout);
+  fputs((const char *)e99_edata(&readme), stdout);
   return 0;
 }
