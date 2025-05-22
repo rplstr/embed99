@@ -64,24 +64,6 @@ typedef struct {
   EMBED_STATIC const er name = {.d = _b_##name##_s, .e = _b_##name##_e};
 
 /**
- * embedtxt(name,path) — embed text file into .rodata + null-terminate
- *
- * size includes the terminating '\\0'.
- */
-#define e99_embedtxt(name, path)                                               \
-  EMBED_EXTERN const uint8_t _b_##name##_s[];                                  \
-  EMBED_EXTERN const uint8_t _b_##name##_e[];                                  \
-  __asm__(".section " EMBED_SECTION "\n\t" EMBED_ALIGN "\n\t"                  \
-          ".global _b_" #name "_s\n\t"                                         \
-          "_b_" #name "_s:\n\t"                                                \
-          ".incbin \"" path "\"\n\t"                                           \
-          ".byte 0\n\t"                                                        \
-          ".global _b_" #name "_e\n\t"                                         \
-          "_b_" #name "_e:\n\t"                                                \
-          ".previous\n");                                                      \
-  EMBED_STATIC const er name = {.d = _b_##name##_s, .e = _b_##name##_e};
-
-/**
  * embedsec(name,path,sec) — embed file into custom section
  *
  * sec must be a quoted section name, e.g. ".mysec".

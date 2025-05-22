@@ -6,7 +6,7 @@ This example embeds its own binary into the data section and then prints the sou
 
 Build and run:
 ```sh
-cc -std=c99 -Wall -I.. -o quine quine.c
+cc -I.. -o quine quine.c
 ./quine
 ```
 
@@ -16,6 +16,6 @@ This example embeds and prints the project’s README file.
 
 Build and run:
 ```sh
-cc -std=c99 -Wall -I.. -o print_readme print_readme.c
+cc --I.. -o print_readme print_readme.c
 ./print_readme
 ```

@@ -1,6 +1,6 @@
 # embed99
 
-Single-header C/C++ library under 200 LoC for embedding arbitrary files into your binary.
+Single-header C/C++ library under 100 LoC for embedding arbitrary files into your binary.
 
 ## Usage
 
