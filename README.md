@@ -1,4 +1,4 @@
-# embed99
+# embed.c
 
 Single-header C/C++ library under 100 LoC for embedding arbitrary files into your binary.
 
